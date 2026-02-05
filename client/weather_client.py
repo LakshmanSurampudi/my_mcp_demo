@@ -188,7 +188,7 @@ async def run_demo(verbose: bool = False):
         print("-" * 60)
         result = await client.call_tool(
             "get_current_weather",
-            {"city": "London"}
+            {"city": "New Delhi"}
         )
         print("📊 Result:")
         print(result)
@@ -200,7 +200,7 @@ async def run_demo(verbose: bool = False):
         print("-" * 60)
         result = await client.call_tool(
             "get_forecast",
-            {"city": "Tokyo", "days": 3}
+            {"city": "Gwalior", "days": 5}
         )
         print("📊 Result:")
         print(result)
@@ -212,7 +212,7 @@ async def run_demo(verbose: bool = False):
         print("-" * 60)
         result = await client.call_tool(
             "get_current_weather",
-            {"city": "Bengaluru"}
+            {"city": "Hyderabad"}
         )
         print("📊 Result:")
         print(result)
