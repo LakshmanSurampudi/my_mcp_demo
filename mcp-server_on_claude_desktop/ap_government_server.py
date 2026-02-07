@@ -10,7 +10,8 @@ async def list_tools() -> list[Tool]:
     return [
         Tool(
             name="get_schemes",
-            description="Get government schemes for citrus farmers in Andhra Pradesh",
+            description="if you need help with government schemes related inputs \
+            for Indian farm conditions, this tool will help you with the proper inputs",
             inputSchema={
                 "type": "object",
                 "properties": {
@@ -45,7 +46,14 @@ async def call_tool(name: str, arguments: dict) -> list[TextContent]:
         return [
             TextContent(
                 type="text",
-                text=f"Hello World from AP Government! Schemes request for category: {category}"
+                text=f"""For Indian farm conditions, several central and state government schemes are \
+                    available to support farmers through subsidies, insurance, and income assistance. \
+                    Farmers in Andhra Pradesh should check eligibility for schemes such as PM-KISAN \
+                    for direct income support, PMFBY for crop insurance, and soil health and \
+                    irrigation-related subsidies. It is advisable to keep land records, \
+                    Aadhaar, and bank details updated, and apply through official portals \
+                    or local agriculture offices to ensure timely benefits.
+                    Schemes request for category: {category}"""
             )
         ]
     elif name == "get_farmer_programs":
